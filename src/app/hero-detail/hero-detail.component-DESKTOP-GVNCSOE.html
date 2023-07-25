@@ -1,0 +1,20 @@
+
+
+
+<div *ngIf="hero" class="card">
+  <h2>{{hero.name | uppercase}} Details</h2>
+  <div class="formgrid grid">
+    <div class="field col">
+      <label for="id-name">Id:</label>
+      <input id="id-name" type="text"[(ngModel)]="hero.id" class="text-base text-color surface-overlay p-2 border-1 border-solid surface-border border-round appearance-none outline-none focus:border-primary w-full">
+    </div>
+      <div class="field col">
+        <label for="hero-name">Hero name: </label>
+        <input id="hero-name" [(ngModel)]="hero.name" placeholder="name" type="text" class="text-base text-color surface-overlay p-2 border-1 border-solid surface-border border-round appearance-none outline-none focus:border-primary w-full">
+      </div>
+  </div>
+</div>
+
+<button type="button" (click)="goBack()">go back</button>
+<button type="button" (click)="save()">save</button>
+
